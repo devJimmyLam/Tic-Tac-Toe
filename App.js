@@ -1,6 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { Entypo } from "@expo/vector-icons";
+import { Button } from "native-base";
 
+
+var itemArray = new Array(9).fill('empty');
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -10,24 +14,41 @@ export default class App extends React.Component {
     };
   }
 
-  drawItem = () => {
-    // TODO: decide what to draw: circle or cross or default
+  drawItem = itemNumber => {
+    //[ x ] TODO: decide what to draw: circle or cross or default
+    if (itemArray[itemNumber] === 'empty') {
+      itemArray[itemNumber] = this.state.isCross;
+      this.setState({ isCross: !itemArray[itemNumber] }, () => { });
+    }
+    //check for win
+
   };
 
-  chooseItemIcon = () => {
-    // TODO: choose appropriate icon
+  chooseItemIcon = itemNumber => {
+    //[ x ]  TODO: choose appropriate icon
+    if (itemArray[itemNumber] !== "empty") {
+      return itemArray[itemNumber] ? "cross" : "circle"
+    }
+    return "pencil";
   };
 
-  chooseItemColor = () => {
-    // TODO: choose color for item 
+  chooseItemColor = itemNumber => {
+    // [ x ]  TODO: choose color for item 
+    if (itemArray[itemNumber] !== "empty") {
+      return itemArray[itemNumber] ? "red" : "green"
+    }
+    return "black";
   };
 
   resetGame = () => {
-    // TODO: reset all values and state
+    //[ x ]  TODO: reset all values and state
+    itemArray.fill("empty");
+    this.setState({ winMessage: " " })
+    // TODO: force update to the component
   };
 
   winGame = () => {
-    // TODO:  decide/check winner
+    //[ x ] TODO:  decide/check winner
   };
 
   render() {

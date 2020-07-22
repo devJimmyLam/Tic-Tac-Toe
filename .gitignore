@@ -1,5 +1,6 @@
 node_modules/**/*
 .expo/*
+fb.js
 npm-debug.*
 *.jks
 *.p8
@@ -8,6 +9,8 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+web-report/
+.env
 
 # macOS
 .DS_Store
