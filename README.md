@@ -1,6 +1,8 @@
 # Tic Tac Toe 
 ## Demo
-COMING SOON
+<p align="center">
+  <img src="./tictactoe_demo.gif">
+</p>
 
 ## Summary
 A mobile tic tac toe game created to learn native-base components. Users can play against ai. 
