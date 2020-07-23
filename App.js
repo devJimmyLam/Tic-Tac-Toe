@@ -32,9 +32,9 @@ export default class App extends React.Component {
 
   chooseItemColor = itemNumber => {
     if (itemArray[itemNumber] !== "empty") {
-      return itemArray[itemNumber] ? "red" : "green";
+      return itemArray[itemNumber] ? "#E74292" : "#45CE30";
     }
-    return "black";
+    return "#4BCFFA";
   };
 
   resetGame = () => {
@@ -206,7 +206,10 @@ export default class App extends React.Component {
           </View>
         </View>
         <Text style={styles.winMessage}>{this.state.winMessage}</Text>
-        <Button full rounded style={styles.button}>
+        <Button
+          onPress={() => this.resetGame()}
+          full rounded style={styles.button}
+        >
           <Text style={styles.btntext}>Reset Game</Text>
         </Button>
       </View>
@@ -217,7 +220,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#6A89CC",
+    backgroundColor: "#30336B",
     alignItems: "center",
     justifyContent: "center"
   },
@@ -225,8 +228,11 @@ const styles = StyleSheet.create({
     color: "#4BCFFA",
     fontSize: 40,
     fontWeight: "bold",
+    padding: 20,
   },
-  grid: {},
+  grid: {
+    backgroundColor: "#192A56"
+  },
   row: {
     flexDirection: "row"
   },
@@ -236,17 +242,20 @@ const styles = StyleSheet.create({
     padding: 30
   },
   winMessage: {
+    color: "white",
     padding: 20,
     fontSize: 25,
     fontWeight: "bold"
   },
   button: {
-    margin: 20,
+    margin: 40,
     padding: 10,
     backgroundColor: "#4BCFFA",
+
   },
   btntext: {
-    color: "#FFF",
+    color: "#192A56",
+    fontSize: 20,
     fontWeight: "bold"
   }
 });
