@@ -5,7 +5,8 @@
 </p>
 
 ## Summary
-A mobile tic tac toe game created to learn native-base components. Users can play against ai. 
+A mobile tic tac toe game created to learn native-base components.
+
 ## Getting Started
 1. Fork and clone from this repository onto your local machine.
 ```bash
