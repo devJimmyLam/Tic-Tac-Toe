@@ -1,7 +1,7 @@
 # Tic Tac Toe 
 ## Demo
 <p align="center">
-  <img src="./tictactoe_demo.gif">
+  <img src="./t_demo.gif">
 </p>
 
 ## Summary
